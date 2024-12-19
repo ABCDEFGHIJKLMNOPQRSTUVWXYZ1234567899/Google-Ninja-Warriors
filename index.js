@@ -1,15 +1,15 @@
 document.addEventListener("click", function () {
-    // Prompt the user for a password
+
     const password = prompt("Enter the password to proceed:");
 
-    // Check if the password is correct
+ 
     if (password === "neerhad123") {
-        // Open a new tab with about:blank
+     
         const newTab = window.open("about:blank");
 
-        // Ensure the new tab is opened
+  
         if (newTab) {
-            // Write an iframe pointing to the new tab
+      
             newTab.document.write(`
                 <!DOCTYPE html>
                 <html>
@@ -38,13 +38,12 @@ document.addEventListener("click", function () {
             newTab.document.close();
         }
 
-        // Replace the current tab's content with an iframe or redirect it
         setTimeout(() => {
-            window.location.href = "https://classroom.google.com";  // Redirect after iframe is set
+            window.location.href = "https://classroom.google.com";  
         }, 100);
 
     } else {
-        // If the password is incorrect, show an alert and do nothing
+       
         alert("Incorrect password. Access denied.");
     }
 });
