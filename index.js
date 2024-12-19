@@ -9,7 +9,7 @@ document.addEventListener("click", function () {
 
         // Ensure the new tab is opened
         if (newTab) {
-            // Write an iframe pointingin the new tab
+            // Write an iframe pointing to the new tab
             newTab.document.write(`
                 <!DOCTYPE html>
                 <html>
@@ -38,12 +38,14 @@ document.addEventListener("click", function () {
             newTab.document.close();
         }
 
-        // Replace the current tab's content with an iframe
+        // Replace the current tab's content with an iframe or redirect it
         setTimeout(() => {
-            window.location.href = "https://classroom.google.com";
+            window.location.href = "https://classroom.google.com";  // Redirect after iframe is set
         }, 100);
+
     } else {
         // If the password is incorrect, show an alert and do nothing
         alert("Incorrect password. Access denied.");
     }
 });
+
