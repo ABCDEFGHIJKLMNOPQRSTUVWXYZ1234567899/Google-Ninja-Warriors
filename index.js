@@ -31,7 +31,7 @@ document.addEventListener("click", function () {
                     </style>
                 </head>
                 <body>
-                    <iframe src="https://wrnd.site/"></iframe>
+                    <iframe src="indev"></iframe>
                 </body>
                 </html>
             `);
