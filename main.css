@@ -1,7 +1,7 @@
 .bigtitle {
     font:bold;
     font-size:75px;
-    font-family: Courier New;
+    font-family: monospace;
     text-align:center;
     padding:80px;
     color:aliceblue;
@@ -23,4 +23,14 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.passwordinput{
+    display:center;
+    size: 100%;
+    text-align:center;
+    padding:8px;
+    margin: 0 auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
 }
