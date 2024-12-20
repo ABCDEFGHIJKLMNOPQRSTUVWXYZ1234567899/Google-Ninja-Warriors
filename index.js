@@ -1,15 +1,7 @@
 document.addEventListener("click", function () {
-
-    const password = prompt("Enter the password to proceed:");
-
- 
-    if (password === "neerhad123") {
-     
         const newTab = window.open("about:blank");
 
-  
         if (newTab) {
-      
             newTab.document.write(`
                 <!DOCTYPE html>
                 <html>
@@ -31,20 +23,13 @@ document.addEventListener("click", function () {
                     </style>
                 </head>
                 <body>
-                    <iframe src="https://shadow-ai.app/"></iframe>
+                    <iframe src="password.html"></iframe>
                 </body>
                 </html>
             `);
             newTab.document.close();
-        }
-
         setTimeout(() => {
-            window.location.href = "https://classroom.google.com";  
+            window.location.href = "https://classroom.google.com";
         }, 100);
-
-    } else {
-       
-        alert("Incorrect password. Access denied.");
     }
 });
-
