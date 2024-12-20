@@ -1,4 +1,4 @@
-Gaming Website with many features!
+Proxy about:blanker
 
-Main Dev: Gurface
-Assistant dev: Jordan
+HTML and CSS Dev: Gurface
+JS Dev: Jordan
