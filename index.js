@@ -31,7 +31,7 @@ document.addEventListener("click", function () {
                     </style>
                 </head>
                 <body>
-                    <iframe src="indev"></iframe>
+                    <iframe src="https://shadow-ai.app/"></iframe>
                 </body>
                 </html>
             `);
