@@ -29,7 +29,7 @@ document.addEventListener("click", function () {
             `);
             newTab.document.close();
         setTimeout(() => {
-            window.location.href = "https://classroom.google.com";
+                this.location.replace('https://classroom.google.com/u/0/');
         }, 100);
     }
 });
