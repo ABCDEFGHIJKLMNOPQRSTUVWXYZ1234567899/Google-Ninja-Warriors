@@ -45,6 +45,7 @@
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           z-index: 1;
+          font-size: xx-small;
         }
         .drop-content a {
         color: black;
@@ -63,11 +64,15 @@
     <div class="button-container">
         <button class="button" onclick="openInIframe('https://myrokoji.github.io/redacted4.github.io/')"><h3>MonkeyGG2 Clone</h3> <h4>by myrokoji</h4> </button>
       <div class="button"> 
-        <button class="dropdown" onclick="navigateToSite()"><h3>Proxies</h3> <h4>Select which proxy you would like:</h4>
+        <button class="dropdown"><h3>Proxies and other games</h3> <h4>Select which proxy you would like:</h4>
         <div class="drop-content" id="dropdown">
-          <a href="https://shadow-ai.app/">Shadow</a>
-          <a href="https://incognito-static-version.pages.dev/">Incognito</a>
-          <a href="https://example.com/beta">Beta</a>
+          <a href onclick="openInIframe('https://shadow-ai.app')">Shadow</a>
+          <a href onclick="openInIframe('https://incognito-static-version.pages.dev/')">Incognito</a>
+          <a href onclick="openInIframe('https://rizzohiosigmajasin111.com.soon.it/')">Doge</a>
+          <a href onclick="openInIframe('https://whatdoesthiswordmean.lol.coute.au/')">Interstellar</a>
+          <a href onclick="openInIframe('https://think.sage.infovizija.com/')">Utopia</a>
+          <a href onclick="openInIframe('https://get-out-of-my-head-get-out-of-my-head.foxgateway.com/')">RammerHead</a>
+          <a href onclick="openInIframe('https://sonadipx778.vercel.app/')">Shuttle</a>
         </div>
         </button>
       </div>
@@ -108,42 +113,6 @@
                 newWindow.document.close();
             } else {
                 alert('Failed to open new window. Please allow pop-ups in your browser.');
-            }
-        }
-        function navigateToSite() {
-            const dropdown = document.getElementById('dropdown');
-            const selectedValue = dropdown.value;
-            const newWindow = window.open('about:blank', '_blank');
-
-            if (selectedValue) {
-              if (newWindow) {
-              newWindow.document.write(`
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <title>My Drive - Google Drive</title>
-                        <style>
-                            body {
-                                margin: 0;
-                                padding: 0;
-                            }
-                            iframe {
-                                width: 100%;
-                                height: 100vh;
-                                border: none;
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        <iframe src="${selectedValue}" frameborder="0"></iframe>
-                    </body>
-                    </html>
-                `);
-
-                newWindow.document.close();
-                }
-            } else {
-                alert('Please select an option before clicking the box.');
             }
         }
     </script>
