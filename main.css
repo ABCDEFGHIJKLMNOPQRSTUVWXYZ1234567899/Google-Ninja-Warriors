@@ -12,13 +12,12 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    overflow: hidden;
+    overflow: autp;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     color: white;
   }
-
   #canvas {
     position: absolute;
     top: 0;
@@ -57,6 +56,17 @@ body {
     margin-left: 0 auto;
     margin-right: 0 auto;
     display: center;
+  }
+  .overlay h2 {
+    font-size: 3em;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    padding: 0px 0px;
+    border-radius: 5px;
   }
   .loader {
     height: 30px;
@@ -134,3 +144,4 @@ body {
     margin-left: 0 auto;
     margin-right: 0 auto;
 }
+
