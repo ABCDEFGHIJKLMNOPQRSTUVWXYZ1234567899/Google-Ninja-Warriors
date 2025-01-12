@@ -17,6 +17,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: white;
+    cursor:none;
   }
   #canvas {
     position: absolute;
@@ -26,6 +27,7 @@ body {
     height: 100%;
     z-index: 0;
   }
+
 
   .overlay {
     position: relative;
@@ -38,6 +40,7 @@ body {
     margin-right: 0 auto;
   }
 
+
   .overlay h1 {
     font-size: 3em;
     margin: 0;
@@ -47,6 +50,7 @@ body {
     margin-right: 0 auto;
     display:center;
   }
+
 
   .overlay h5 {
     font-size: 1.5em;
@@ -119,21 +123,24 @@ body {
         background-clip:text;
     }
 
+
 @keyframes l21{
     100%{background-position: left}
 }
 
+
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
+
 
 .passwordinput{
     display:center;
@@ -144,56 +151,69 @@ body {
     margin-left: 0 auto;
     margin-right: 0 auto;
 }
-.floating-letter {
+.floating-letter, .exploding-image {
     position: absolute;
     pointer-events: none;
+}
+
+
+.floating-letter {
     font-family: 'Arial', sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: #fff;
-    text-shadow: 
-        0 0 5px #ff00ff, 
-        0 0 10px #ff00ff, 
-        0 0 20px #ff00ff, 
-        0 0 40px #ff00ff, 
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff,
         0 0 80px #ff00ff;
     animation: float 1.5s ease-out forwards, flicker 1.5s infinite alternate;
 }
 
+
+.exploding-image {
+    width: 80px;
+    height: 80px;
+    animation: float 1.5s ease-out forwards;
+}
+
+
 @keyframes float {
     0% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1);
     }
     100% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-50px) scale(1.5);
     }
 }
 
+
 @keyframes flicker {
     0% {
-        text-shadow: 
-            0 0 5px #ff00ff, 
-            0 0 10px #ff00ff, 
-            0 0 20px #ff00ff, 
-            0 0 40px #ff00ff, 
+        text-shadow:
+            0 0 5px #ff00ff,
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 40px #ff00ff,
             0 0 80px #ff00ff;
     }
     50% {
-        text-shadow: 
-            0 0 3px #ff00ff, 
-            0 0 6px #ff00ff, 
-            0 0 12px #ff00ff, 
-            0 0 24px #ff00ff, 
+        text-shadow:
+            0 0 3px #ff00ff,
+            0 0 6px #ff00ff,
+            0 0 12px #ff00ff,
+            0 0 24px #ff00ff,
             0 0 48px #ff00ff;
     }
     100% {
-        text-shadow: 
-            0 0 7px #ff00ff, 
-            0 0 14px #ff00ff, 
-            0 0 28px #ff00ff, 
-            0 0 56px #ff00ff, 
+        text-shadow:
+            0 0 7px #ff00ff,
+            0 0 14px #ff00ff,
+            0 0 28px #ff00ff,
+            0 0 56px #ff00ff,
             0 0 112px #ff00ff;
     }
 }
