@@ -1,8 +1,8 @@
 const text = "gurfacegg2";
         const images = [
-            'https://upload.wikimedia.org/wikipedia/en/6/66/Roblox_Logo.png',
+            'neerhad1.jpg',
             'https://static.vecteezy.com/system/resources/thumbnails/036/025/219/small_2x/ai-generated-happy-fat-man-in-a-blue-t-shirt-showing-thumb-up-photo.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/3/3e/Icon.png',
+            '1736717796719.jpg',
         ];
 
 
