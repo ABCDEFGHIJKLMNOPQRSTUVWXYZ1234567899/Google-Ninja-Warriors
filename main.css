@@ -17,7 +17,6 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: white;
-    cursor:none;
   }
   #canvas {
     position: absolute;
