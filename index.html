@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GurfaceGG2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0.5em 0;
+            color: #333;
+            cursor: pointer;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 0.5em 0 2em 0;
+            color: #555;
+        }
+
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icon-row a {
+            text-decoration: none;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            border-color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="clickable-h1">This is GurfaceGG2</h1>
+    <h3>A generic platform to access all Google apps</h3>
+
+    <div class="icon-row">
+        <a href="https://docs.google.com" target="_blank" title="Google Docs">
+            <div class="icon" style="background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Docs.width-500.format-webp.webp');"></div>
+        </a>
+        <a href="https://slides.google.com" target="_blank" title="Google Slides">
+            <div class="icon" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15G5C5krY2oqF0nunVFhMi2URHrbhdMcf21sVNkivEKf4vskTez3i6S1e4m9A85LBWao&usqp=CAU');"></div>
+        </a>
+        <a href="https://sheets.google.com" target="_blank" title="Google Sheets">
+            <div class="icon" style="background-image: url('https://ssl.gstatic.com/docs/doclist/images/icon_11_spreadsheet_list.png');"></div>
+        </a>
+        <a href="https://forms.google.com" target="_blank" title="Google Forms">
+            <div class="icon" style="background-image: url('https://www.gstatic.com/images/branding/product/1x/forms_512dp.png');"></div>
+        </a>
+        <a href="https://drive.google.com" target="_blank" title="Google Drive">
+            <div class="icon" style="background-image: url('https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png');"></div>
+        </a>
+    </div>
+
+    <script>
+        let clickCount = 0;
+
+        document.getElementById('clickable-h1').addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 7) {
+                this.location.replace("main.html");
+            }
+        });
+    </script>
+
+</body>
+</html>
