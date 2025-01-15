@@ -1,93 +1,127 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="main.css" type="text/css">
-      <script src="cursor.js" defer></script>
-  <script src="background.js" defer></script>
+<link rel="stylesheet" href="main.css" type="text/css">
+<script async src="background.js"></script>
+<script async src="cursor.js"></script>
+
+
 <head>
-    <title>Welcome to GurfaceGG2</title>
-    <style>
-        .button-container {
-            display: flex;
-            flex-direction: row;
-            gap: 10%;
-            align-items: center;
-            display:center;
-            left:50%;
-        }
+  <title>Welcome to GurfaceGG2</title>
+  <style>
+    .button-container {
+      display: center;
+      gap: 20px;
+    }
 
-        .button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 40%;
-            height: 100%;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
 
-        .button:hover {
-            background-color: #45a049;
-        }
-        .dropdown{
-          background-color: #4CAF50;
-          width: 50%;
-          height: 100%;
-        }
-        .drop-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-          font-size: x-small;
-        }
-        .drop-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-        .dropdown:hover .drop-content {display: block;}
-    </style>
+    .button {
+      width: 350px;
+      height: 350px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+
+    .button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+
+    .dropdown {
+      width: 350px;
+      height: 350px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+
+    .dropdown img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .dropdown:hover {
+      background-color: #45a049;
+    }
+
+
+    .drop-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 80px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+
+    .drop-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: inline;
+    }
+
+
+    .dropdown:hover .drop-content {
+      display: block;
+    }
+  </style>
 </head>
+
+
 <body>
   <canvas id="canvas"></canvas>
   <div class="overlay">
     <h2>Welcome to GurfaceGG2</h2>
     <p>This is a project developed by Gurface and Jordan to bring happiness and freedom to all</p>
     <div class="button-container">
-        <button class="button" onclick="openInIframe('https://myrokoji.github.io/redacted4.github.io/')"><h3>MonkeyGG2 Clone</h3> <h4>by myrokoji</h4> </button>
-      <div class="button"> 
-        <button class="dropdown"><h3>Proxies and other games</h3> <h4>Select which proxy you would like:</h4>
+      <button class="button" onclick="openInIframe('https://myrokoji.github.io/redacted4.github.io/')"><img
+          src=""> </button>
+      <button class="dropdown">
+        <img src="">
         <div class="drop-content" id="dropdown">
           <a href onclick="openInIframe('https://shadow-ai.app')">Shadow</a>
-          <a href onclick="openInIframe('http://sandtar.dockl.com/')">Incognito</a>
-          <a href onclick="openInIframe('https://house.shirokuriwaki.com/')">Doge</a>
-          <a href onclick="openInIframe('https://scienceof.medscience.cl/')">Interstellar</a>
+          <a href onclick="openInIframe('https://incognito-static-version.pages.dev/')">Incognito</a>
+          <a href onclick="openInIframe('https://rizzohiosigmajasin111.com.soon.it/')">Doge</a>
+          <a href onclick="openInIframe('https://whatdoesthiswordmean.lol.coute.au/')">Interstellar</a>
           <a href onclick="openInIframe('https://think.sage.infovizija.com/')">Utopia</a>
           <a href onclick="openInIframe('https://get-out-of-my-head-get-out-of-my-head.foxgateway.com/')">RammerHead</a>
+          <a href onclick="openInIframe('https://sonadipx778.vercel.app/')">Shuttle</a>
         </div>
-        </button>
-      </div>
-        <button class="button" onclick="openInIframe('https://myrokoji.github.io/wikipediaarchiver/archiver.html')">about:blank Embedder (if you wanna play specific websites in class that don't work on proxies. jchabin only works here)</button>
+      </button>
+
+
+      <button class="button" onclick="openInIframe('https://myrokoji.github.io/wikipediaarchiver/archiver.html')"><img
+          src=""></button>
     </div>
   </div>
+  <script>
 
-    <script>
-        function openInIframe(url) {
-            
-            const newWindow = window.open('about:blank', '_blank');
 
-            if (newWindow) {
-               
-                newWindow.document.write(`
+    function openInIframe(url) {
+      const newWindow = window.open('about:blank', '_blank');
+
+
+      if (newWindow) {
+
+
+        newWindow.document.write(`
                     <!DOCTYPE html>
                     <html>
                     <head>
@@ -109,12 +143,15 @@
                     </body>
                     </html>
                 `);
-            
-                newWindow.document.close();
-            } else {
-                alert('Failed to open new window. Please allow pop-ups in your browser.');
-            }
-        }
-    </script>
+
+
+        newWindow.document.close();
+      } else {
+        alert('Failed to open new window. Please allow pop-ups in your browser.');
+      }
+    }
+  </script>
 </body>
+
+
 </html>
