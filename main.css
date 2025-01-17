@@ -63,7 +63,7 @@ body {
   .overlay h2 {
     font-size: 3em;
     position: absolute;
-    top: -40%;
+    top: -50%;
     left: 50%;
     transform: translateX(-50%);
     color: #00ff00;
