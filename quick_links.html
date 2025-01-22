@@ -55,5 +55,48 @@
           src="thumbnail_1736968942295-removebg-preview.png"></button>
     </div>
   </div>
+  <link id="favicon" rel="icon" href="">
+    <script>
+        function IconChange(theicon) {
+            let title = '';
+            let favicon = '';
+            
+            switch(theicon) {
+                case '1':
+                    title = 'Google Drive';
+                    favicon = 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Drive.png';
+                    break;
+                case '2':
+                    title = 'Google Classroom';
+                    favicon = 'https://static.wixstatic.com/media/c8c0d3_ba93838aad2a44aab8ddf00b146ce5a0~mv2.png/v1/fill/w_614,h_614,al_c,lg_1,q_90/c8c0d3_ba93838aad2a44aab8ddf00b146ce5a0~mv2.png';
+                    break;
+                case '3':
+                    title = 'Google Docs';
+                    favicon = 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Docs.png';
+                    break;
+                case '4':
+                    title = 'Google Slides';
+                    favicon = 'https://blogs.shu.ac.uk/shutel/files/2014/08/GSlides.png';
+                    break;
+                default:
+                    alert("Invalid choice. Please select a valid option.");
+                    return;
+            }
+
+            document.title = title;
+            document.getElementById('favicon').href = favicon;
+        }
+
+        function ChooseLeChosé() {
+            alert("Choose an option:\n1: Google Drive\n2: Google Classroom\n3: Google Docs\n4: Google Slides");
+            let userChoice = prompt("Enter the number corresponding to your choice (1-4):");
+
+            if (userChoice !== null) {
+                IconChange(userChoice);
+            }
+        }
+
+        window.onload = ChooseLeChosé;
+    </script>
 </body>
 </html>
