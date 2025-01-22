@@ -1,12 +1,12 @@
 document.addEventListener("click", function () {
-        const newTab = window.open("about:blank");
+        const newTab = window.open('about:blank', '_blank');
 
         if (newTab) {
             newTab.document.write(`
                 <!DOCTYPE html>
                 <html>
                 <head>
-                    <title>about:blank</title>
+                    <title>My Drive - Google Drive</title>
                     <style>
                         body, html {
                             margin: 0;
