@@ -7,6 +7,7 @@ document.addEventListener("click", function () {
                 <html>
                 <head>
                     <title>My Drive - Google Drive</title>
+                    <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png">
                     <style>
                         body, html {
                             margin: 0;
