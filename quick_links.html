@@ -37,6 +37,28 @@
       transform: scale(1.5);
       border-color: #888;
     }
+    .box {
+            background-color: black;
+            padding: 20px;
+            color: #00FF00;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+    .box select, .box button {
+            background-color: #00BFBF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+    .box button:hover {
+            background-color: #555;
+        }
   </style>
 </head>
 
@@ -53,53 +75,77 @@
       </button>
       <button class="button" onclick="openInIframe('https://myrokoji.github.io/wikipediaarchiver/archiver.html')"><img
           src="thumbnail_1736968942295-removebg-preview.png"></button>
+      <div class="box">
+        <h5>Tab Cloaker</h5>
+        <label for="yooptionsss">Change the title and icon of the page:</label>
+        <select id="yooptionsss">
+            <option value="default">Default</option>
+            <option value="google">Google</option>
+            <option value="classroom">Google Classroom</option>
+            <option value="drive">Google Drive</option>
+            <option value="docs">Google Docs</option>
+            <option value="slides">Google Slides</option>
+            <option value="sheets">Google Sheets</option>
+        </select>
+        <button onclick="cloakering()">Save</button>
+        <button onclick="restartingggg()">Reset Cloak</button>
+    </div>
     </div>
   </div>
-  <link id="favicon" rel="icon" href="">
-  <script>
-        /*
-        CURRENTLY BUGGED WORKING ON IT
-    function IconChange(theicon) {
-            let title = '';
-            let favicon = '';
-            
-            switch(theicon) {
-                case '1':
-                    title = 'Google Drive';
-                    favicon = 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Drive.png';
+  
+    <script>
+        function cloakering() {
+            const yooptionsss = document.getElementById('yooptionsss');
+            const yochoice = yooptionsss.value;
+
+            let title, icon;
+
+            switch (yochoice) {
+                case 'google':
+                    title = 'Google';
+                    icon = 'https://www.google.com/favicon.ico';
                     break;
-                case '2':
+                case 'classroom':
                     title = 'Google Classroom';
-                    favicon = 'https://static.wixstatic.com/media/c8c0d3_ba93838aad2a44aab8ddf00b146ce5a0~mv2.png/v1/fill/w_614,h_614,al_c,lg_1,q_90/c8c0d3_ba93838aad2a44aab8ddf00b146ce5a0~mv2.png';
+                    icon = 'https://classroom.google.com/favicon.ico';
                     break;
-                case '3':
+                case 'drive':
+                    title = 'Google Drive';
+                    icon = 'https://drive.google.com/favicon.ico';
+                    break;
+                case 'docs':
                     title = 'Google Docs';
-                    favicon = 'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Docs.png';
+                    icon = 'https://docs.google.com/favicon.ico';
                     break;
-                case '4':
+                case 'slides':
                     title = 'Google Slides';
-                    favicon = 'https://blogs.shu.ac.uk/shutel/files/2014/08/GSlides.png';
+                    icon = 'https://slides.google.com/favicon.ico';
+                    break;
+                case 'sheets':
+                    title = 'Google Sheets';
+                    icon = 'https://sheets.google.com/favicon.ico';
                     break;
                 default:
-                    alert("Invalid choice. Please select a valid option.");
-                    return;
+                    title = 'Tab Cloaker';
+                    icon = 'favicon.ico';
             }
 
             document.title = title;
-            document.getElementById('favicon').href = favicon;
+
+            const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+            link.rel = 'icon';
+            link.href = icon;
+            document.head.appendChild(link);
         }
 
-        function ChooseLeChosé() {
-            alert("Choose an option:\n1: Google Drive\n2: Google Classroom\n3: Google Docs\n4: Google Slides");
-            let userChoice = prompt("Enter the number corresponding to your choice (1-4):");
+        function restartingggg() {
+            document.title = 'Tab Cloaker';
 
-            if (userChoice !== null) {
-                IconChange(userChoice);
+            const link = document.querySelector("link[rel~='icon']");
+            if (link) {
+                link.href = 'favicon.ico';
             }
         }
-    
-        window.onload = ChooseLeChosé;
-        */
     </script>
 </body>
 </html>
