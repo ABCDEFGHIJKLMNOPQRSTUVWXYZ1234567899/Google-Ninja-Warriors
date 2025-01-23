@@ -92,20 +92,20 @@
             <option value="slides">Google Slides</option>
             <option value="sheets">Google Sheets</option>
         </select>
-        <button onclick="cloakering()">Save</button>
-        <button onclick="restartingggg()">Reset Cloak</button>
+        <button onclick="cloakinggggg()">Save</button>
+        <button onclick="resetdacloak()">Reset Cloak</button>
     </div>
     </div>
   </div>
   
     <script>
-        function cloakering() {
-            const yooptionsss = document.getElementById('yooptionsss');
-            const yochoice = yooptionsss.value;
+        function cloakinggggg() {
+            const tabOptions = document.getElementById('tabOptions');
+            const selectedOption = tabOptions.value;
 
             let title, icon;
 
-            switch (yochoice) {
+            switch (selectedOption) {
                 case 'google':
                     title = 'Google';
                     icon = 'https://www.google.com/favicon.ico';
@@ -134,21 +134,27 @@
                     title = 'Tab Cloaker';
                     icon = 'favicon.ico';
             }
-
             document.title = title;
 
-            const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
-            link.rel = 'icon';
+            let link = document.querySelector("link[rel~='icon']");
+            if (!link) {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                document.head.appendChild(link);
+            }
             link.href = icon;
-            document.head.appendChild(link);
         }
 
-        function restartingggg() {
+        function resetdacloak() {
             document.title = 'Tab Cloaker';
-
-            const link = document.querySelector("link[rel~='icon']");
+            let link = document.querySelector("link[rel~='icon']");
             if (link) {
                 link.href = 'favicon.ico';
+            } else {
+                link = document.createElement('link');
+                link.rel = 'icon';
+                link.href = 'favicon.ico';
+                document.head.appendChild(link);
             }
         }
     </script>
