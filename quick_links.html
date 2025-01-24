@@ -7,13 +7,28 @@
 
 <head>
   <title>Welcome to Google Ninja Warriors</title>
-  <link rel="icon" type="image/x-icon" href="google-drive-for-business_ufpw.1200.webp">
-  <style>
+   <style>
     .button-container {
       display: center;
       gap: 20px;
     }
-
+    .logo {
+      width: 150px;
+      height: 150px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: absolute;
+      top: -70%;
+      left: 47.5%;
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .button {
       width: 250px;
@@ -43,8 +58,11 @@
        color: #00FF00;
        border-radius: 10px;
        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-       left: 50%;
-       top: 50%;
+       height: 50%;
+       display: center;
+       width: 900px;
+       max-width: fit-content;
+       margin-inline: auto;
     }
 
     .box select, .box button {
@@ -62,12 +80,14 @@
        background-color: #555;
     }
   </style>
+  <link id="favicon" rel="icon" href="" type="" sizes="16x16">
 </head>
-
-
 <body>
   <canvas id="canvas"></canvas>
   <div class="overlay">
+    <div class="logo">
+      <img src="gurface-gg2-logo.jfif">
+    </div>
     <h2>Welcome to Google Ninja Warriors</h2>
     <div class="button-container">
       <button class="button" onclick="openInIframe('https://myrokoji.github.io/redacted4.github.io/')"><img
@@ -81,79 +101,56 @@
         <h5>Tab Cloaker</h5>
         <label for="yooptionsss">Change the title and icon of the page:</label>
         <select id="yooptionsss">
-            <option value="default">Default</option>
-            <option value="google">Google</option>
-            <option value="classroom">Google Classroom</option>
-            <option value="drive">Google Drive</option>
-            <option value="docs">Google Docs</option>
-            <option value="slides">Google Slides</option>
-            <option value="sheets">Google Sheets</option>
+          <option value="default">Default</option>
+          <option value="google">Google</option>
+          <option value="classroom">Google Classroom</option>
+          <option value="drive">Google Drive</option>
+          <option value="docs">Google Docs</option>
+          <option value="slides">Google Slides</option>
+          <option value="sheets">Google Sheets</option>
         </select>
         <button onclick="cloakinggggg()">Save</button>
         <button onclick="resetdacloak()">Reset Cloak</button>
-    </div>
-    </div>
-  </div>
-  
-    <script>
-        function cloakinggggg() {
-            const tabOptions = document.getElementById('tabOptions');
-            const selectedOption = tabOptions.value;
 
-            let title, icon;
-
-            switch (selectedOption) {
-                case 'google':
-                    title = 'Google';
-                    icon = 'https://www.google.com/favicon.ico';
-                    break;
-                case 'classroom':
-                    title = 'Google Classroom';
-                    icon = 'https://classroom.google.com/favicon.ico';
-                    break;
-                case 'drive':
-                    title = 'Google Drive';
-                    icon = 'drive_2020q4_32dp.png';
-                    break;
-                case 'docs':
-                    title = 'Google Docs';
-                    icon = 'https://docs.google.com/favicon.ico';
-                    break;
-                case 'slides':
-                    title = 'Google Slides';
-                    icon = 'https://slides.google.com/favicon.ico';
-                    break;
-                case 'sheets':
-                    title = 'Google Sheets';
-                    icon = 'https://sheets.google.com/favicon.ico';
-                    break;
-                default:
-                    title = 'Tab Cloaker';
-                    icon = 'favicon.ico';
+        <script>
+          function cloakinggggg() {
+            const cloakoption = document.getElementById('yooptionsss').value;
+            if (cloakoption === 'default') {
+              const favicon = document.getElementById('favicon');
+              favicon.href = "gurface-gg2-logo.jfif";
+              document.title = "Google Ninja Warriors";
+            } else if (cloakoption === 'google'){
+              const favicon = document.getElementById('favicon');
+              favicon.href = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/640px-Google_%22G%22_logo.svg.png";
+              document.title = "Google";
+            } else if (cloakoption === 'classroom') {
+              const favicon = document.getElementById('favicon');
+              favicon.href = "https://images.sftcdn.net/images/t_app-icon-m/p/bd8befee-57e6-4613-8a7c-90cdcf360fd6/480516514/google-classroom-Download-Google-Classroom.jpg";
+              document.title = "Google Classroom";
+            } else if (cloakoption === 'drive') {
+              const favicon = document.getElementById('favicon');
+              favicon.href = "https://sm.pcmag.com/t/pcmag_me/review/g/google-dri/google-drive-for-business_ufpw.1200.png";
+              document.title = "My Drive - Google Drive";
+            } else if (cloakoption === 'docs') {
+              const favicon = document.getElementById('favicon');
+              favicon.href = "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Docs.png";
+              document.title = "Google Docs";
+            } else if (cloakoption === 'slides') {
+              const favicon = document.getElementById('favicon');
+              favicon.href = "https://img.utdstc.com/icon/a6e/471/a6e4716552d5c269d4ccb859ef75f495b95e7e796ad663d5fff084ff797fbff5:200";
+              document.title = "Google Slides";
+            } else if (cloakoption === 'sheets') {
+              const favicon = document.getElementById('favicon');
+              favicon.href = "https://images.sftcdn.net/images/t_app-icon-m/p/81b72e82-9a61-11e6-91b9-00163ec9f5fa/1872868276/google-sheets-logo";
+              document.title = "Google Sheets";
             }
-            document.title = title;
+          }
 
-            let link = document.querySelector("link[rel~='icon']");
-            if (!link) {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                document.head.appendChild(link);
-            }
-            link.href = icon;
-        }
-
-        function resetdacloak() {
-            document.title = 'Tab Cloaker';
-            let link = document.querySelector("link[rel~='icon']");
-            if (link) {
-                link.href = 'favicon.ico';
-            } else {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                link.href = 'favicon.ico';
-                document.head.appendChild(link);
-            }
-        }
-    </script>
+          function resetdacloak() {
+            const favicon = document.getElementById('favicon');
+            favicon.href = "gurface-gg2-logo.jfif";
+            document.title = "Google Ninja Warriors";
+          }
+        </script>
 </body>
 </html>
