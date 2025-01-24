@@ -3,8 +3,6 @@
 <link rel="stylesheet" href="main.css" type="text/css">
 <script async src="background.js"></script>
 <script async src="iframe.js"></script>
-
-
 <head>
   <title>Welcome to Google Workspaces</title>
   <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png">
@@ -16,15 +14,24 @@
 
 
     .button {
-      width: 200px;
-      height: 200px;
-      padding: 0;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
+      display: inline-block;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                font-weight: 600;
+                color: #fff;
+                font-size: 14px;
+                height: 38px;
+                padding: 8px 24px;
+                border-radius: 50px;
+                background-image: linear-gradient(180deg,#7c8aff,#3c4fe0);
+                box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+                transition: all .2s ease-out;
+                :hover{
+                    box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
+                }
+                
+              }
 
     .button img {
       width: 100%;
