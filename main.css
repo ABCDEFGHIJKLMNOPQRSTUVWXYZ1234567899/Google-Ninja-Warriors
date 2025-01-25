@@ -12,10 +12,11 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    overflow: autp;
+    overflow: auto;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    color: black;
   }
   #canvas {
     position: absolute;
@@ -24,6 +25,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
+    color: black;
   }
 
 
@@ -36,6 +38,7 @@ body {
     text-align: center;
     margin-left: 0 auto;
     margin-right: 0 auto;
+    color: black;
   }
 
 
